@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+    <!--<link rel="stylesheet" href="/static/css/main.css" />-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
+<body>
+    <body class="is-preload">
+			<div id="wrapper">
+
+	<section id="banner" class="major">
+		<div class="inner">
+		  <div style="text-align:right;">
+		  <a href="{{url_for('logout') }}" class="button" type="submit" >Log Out</a>
+		  <p></p>
+		  <a href="{{ url_for('change_password')}}" class="button" type="submit" >Change Password</a></li><br>
+		  </div>
+			<header class="major">
+				<h1>Hi {{session.username}}!</br></br> Welcome to the Dashboard</h1>
+			</header>
+
+	<div class="content">
+	<a href="{{url_for('user_image_form', msg=' ')}}" class="button" >Upload the image</a></li>
+    <a href="{{url_for('face_collection', msg=' ')}}" class="button"x>Face collection</a></font>
+    <a href="{{url_for('face_recognition', msg=' ')}}" class="button"x>Face recognition</a></font>
+    <a href="{{url_for('face_crop_page', msg=' ')}}" class="button"x>Face detection</a></font>
+    <a href="{{url_for('list_all_main', msg=' ')}}" class="button"x>List all images</a></font>
+    <!--<a href="{{ url_for('change_password')}}">Change Password</a></li><br>-->
+    <!--<li><a href="{{url_for('logout') }}" class="button" type="submit" >Log Out</a>-->
+    <div/>
+</body>
+
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</html>

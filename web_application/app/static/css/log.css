@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+body{
+	background-image: 	url(../background.png);
+}
+#logIn{
+	width: 420px;
+	margin:0 auto;
+	box-shadow: 1px 3px 15px 15px rgb(74,162,206);
+	animation: logIn 2s;
+	position: relative;
+	top: 3vh;
+	opacity: 1;
+}
+@keyframes logIn
+{
+	0% {top:-60vh;opacity: 0.4;}
+	70% {top:5vh;}
+	90% {top:2vh;}
+	100% {top:3vh;opacity: 1;}
+}
+#logIn .main{
+	height: 75vh;
+	min-height: 500px;
+	background-color: rgb(254,254,254);
+	border-radius: 20px 20px 0 0;
+}
+#logIn .main .title div:nth-child(1){
+	width: 250px;
+	margin: 20px auto;
+	padding: 30px 0 0;
+	font-size: 20px;
+	font-weight: 600;
+	border-bottom:2px solid rgb(94,186,233);
+}
+#logIn .main .title div:nth-child(2){
+	width: 162px;
+	height: 120px;
+	margin: 20px auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#logIn .main .title div:nth-child(3){
+	font-size: 24px;
+	font-weight: 600;
+}
+#logIn .main .form{
+	width: 400px;
+	margin: 20px auto 0;
+}
+#logIn .main .form input{
+	display: block;
+	width: 240px;
+	height: 40px;
+	margin: 20px auto 0;
+	font-size: 20px;
+	background-color: rgb(245,245,245);
+	border:3px solid rgb(254,254,254);
+	border-radius: 10px;
+	transition:all 1.5s;
+}
+#logIn .main .form input:focus{
+	outline:none;
+	background-color: rgb(254,254,254);
+	border:3px solid rgb(245,245,245);
+	border-bottom:3px solid rgb(94,186,233);
+}
+#logIn .main .form input:nth-last-child(1){
+	
+}
+#logIn .main .form input[type=submit]{
+	width: 140px;
+	height: 50px;
+	margin: 20px auto 0;
+	font-size: 16px;
+	color: rgb(254,254,254);
+	background-color: rgb(86,186,237);
+	cursor:  pointer;
+	transition:all 1.5s;
+}
+#logIn .main .form input[type=submit]:hover{
+	background-color: rgb(57,172,231);
+}
+#logIn .main .form a{
+	display: inline-block;
+	padding: 0 0 10px;
+	margin: 10px auto 0;
+	font-size: 14px;
+	color: rgb(105,105,105);
+	transition:all 0.5s;
+	text-decoration: none;
+}
+#logIn .main .form a:hover{
+	color: rgb(145,186,221);
+}
+#logIn .bottom{
+	width: 100%;
+	background-color: rgb(245,245,245);
+	border-radius: 0 0 20px 20px;
+	padding: 15px 0;
+	font-size: 16px;
+	color: rgb(105,105,105);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="text-align:center;">
+        <h1>Face Detection Show Place</h1>
+    </div>
+    <div>
+       {% for url, direction in newlist %}
+             <a href=" {{url_for('compare_all_pics', file=direction)}}" target="_blank" >
+                <img src= "{{url}}" width="8%" height="8%">
+            </a>
+        {% endfor %}
+     </div>
+    
+    
+    <div style="text-align:center;">
+    <h1 style="...">Face Detection Upload Form</h1>
+    <h3 class="msg">{{ msg }}</h3>
+    <form action="{{url_for ('crop_face')}}" enctype="multipart/form-data" method="post" style="...">
+        Please upload an image.<div>
+        <input type="file" name="recognition_file" accept="image/*"<br/>
+        <input type="submit" value="Send">
+        <input type="reset">
+    </div>
+    </form>
+    
+    <br/><br/>
+    <div style="text-align:left;">
+
+    </form>
+    <a href="{{url_for('dashboard')}}" class="button">Back to Dashboard</a><br>
+    </form>
+    <p></p>
+    <form>
+     <a href="{{url_for('logout') }}" class="button">Log Out</a>
+    </form>
+        </div>
+   
+</body>
+</html>

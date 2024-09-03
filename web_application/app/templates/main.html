@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Welcome To Image Home Page</h1>
+							</header>
+							<div class="content">
+								<ul class="actions">
+									<li><a href="{{url_for('login')}}" class="button next scrolly">Press Here To Login</a></li>
+									<!--<li><a href="{{ url_for('create_table')}}" class="button">Create Table</a></li>-->
+         <!--                           <li><a href="{{ url_for('delete_table')}}" class="button">Delete Table</a></li>-->
+         <!--                           <li><a href="{{ url_for('create_collection')}}" class="button">Create Collection</a></li>-->
+         <!--                           <li><a href="{{ url_for('delete_collection')}}" class="button">Delete Collection</a></li>-->
+								</ul>
+							</div>
+						</div>
+					</section>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>

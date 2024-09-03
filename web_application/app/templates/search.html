@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+  
+  <title>List Images Setting</title>
+  <br/><br/>
+  <h3 class="msg">{{ msg }}</h3>
+  
+  <div>
+    <form action="{{url_for('image_date')}}" method="post" >
+    <label for="bday">List All Images by the date:</label>
+    <!--<script>-->
+    <!--input[type="date"]:valid {-->
+    <!--       background-color: green;-->
+    <!--}-->
+      
+    <!--</script>-->
+    
+    <p></p>
+    From
+    <input type="date" id="startdate" name="startdate" max="3000-01-01" onfocus="this.max=new Date().toISOString().split('T')[0]" required> 
+    To
+    <input type="date" id="enddate" name="enddate" max="3000-01-01" onfocus="this.max=new Date().toISOString().split('T')[0]" required>
+    
+    <span class="validity"></span> <input type="submit", value="Submit">
+    </form>
+  </div>
+  <!--<div>-->
+  <!--  <input type="submit", value="Send" target="_blank">-->
+  <!--</div>-->
+  
+ <br/><br/>
+
+
+ <div class="col-4 col-12-small">
+   <form action="{{ url_for('image_list_all')}}" method="post" >
+                <label for="bday">List All Images by sort or ignore the option:</label> 
+                <p></p>
+                <select name="sort-select" id="sort-select"  >
+                <option value="">-Choose a sort option-</option>
+                <option value="date">Date</option>
+                <option value="size">Size</option>
+                <br/><br/>
+                <input type="submit", value="Submit" />
+    </form>
+  </div>
+  
+  
+  <br/><br/>
+  <div style="text-align:left;">
+
+    </form>
+    <a href="{{url_for('dashboard')}}" class="button">Back to Dashboard</a><br>
+    </form>
+    <p></p>
+    <form>
+     <a href="{{url_for('logout') }}" class="button">Log Out</a>
+    </form>
+  
+  </div>
+  
+  </html>

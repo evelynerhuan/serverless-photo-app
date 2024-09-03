@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Photo Gallery</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+	<!--	<link rel="stylesheet" href="/templates/static/css/main.css" />-->
+	<!--	<noscript><link rel="stylesheet" href="/templates/static/css/noscript.css" /></noscript>-->
+	<!--</head>-->
+	<!--<body class="is-preload">-->
+	<!--		<div id="wrapper"><div>-->
+
+        <div style="text-align:center;">
+    <!--    <h1>Photo Gallery</h1>-->
+    <!--</div>-->
+    <!--<div>-->
+    <!--   {% for row in cursor %}-->
+    <!--        <a href=" {{url_for('view_transform_image', filename=row[6])}}" >-->
+    <!--            <img src=" {{url_for('show_image', filename= row[6] + '_thumbnail.png')}}" >-->
+    <!--        </a>-->
+    <!--    {% endfor %}-->
+    <!-- </div>-->
+
+    <!--<br /><br /><br />-->
+
+  <body>
+  <div>
+    <div style="text-align:center;">
+    <h1>Upload Form</h1>
+  <div>
+    
+    <h3 class="msg">{{ msg }}</h3>
+    <form action="{{url_for('image_transform')}}"  enctype="multipart/form-data" method="post">
+   	What is the image files to upload? <input type="file" name="image_file" enctype="multipart/form-data" accept="image/*" multiple><br/>
+   	<input type="submit" value="Send"> <input type="reset" value="Reset">
+    </form>
+
+    <br/><br/>
+    
+    
+<!--<br/><br/>-->
+
+    <form action="{{url_for('url_image')}}"  enctype="multipart/form-data" method="post">
+    Use URL to upload image? <input id="url" name="url" type="url" placeholder="Enter Your URL" class="textbox"/><br/>
+    <input type="submit" value="Send"><input type="reset" value="Reset">
+    </form>
+
+  
+
+    <div style="text-align:left;">
+
+    </form>
+    <a href="{{url_for('dashboard')}}" class="button">Back to Dashboard</a><br>
+    </form>
+    <p></p>
+    <form>
+     <a href="{{url_for('logout') }}" class="button">Log Out</a>
+    </form>
+        </div>
+</html>

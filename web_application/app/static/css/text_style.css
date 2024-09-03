@@ -1,0 +1,38 @@
+h1{
+	font-size: 50px;
+	font-family: "Times New Roman", Times, serif;
+	color:black;
+	text-align:center;
+
+}
+h2{
+	font-size: 40px;
+	font-family: "Times New Roman", Times, serif;
+	color:black;
+	text-align:center;
+
+}
+h3{
+	font-size: 30px; 
+    font-family: "Times New Roman", Times, serif;
+    color:black;
+    text-align:center;
+}
+
+p{
+	font-size: 30px; 
+	font-family: "Times New Roman", Times, serif;
+	color:black;
+    text-align:center;
+
+}
+
+p2{
+	font-size: 30px; 
+	font-family: "Times New Roman", Times, serif;
+	color:black;
+    background-color:#A21C1C;
+}
+
+
+

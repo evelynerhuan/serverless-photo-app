@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--<title>Image Preview</title>-->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+
+<div style="text-align:center;">
+  <head>
+    <title>Image Filter</title>
+  </head>
+    <h1>Image Filter</h1>
+      {% for url, file in filelist %}
+            <style>
+            h3{
+            text-transform: capitalize;
+            }
+            </style>
+            <img src="{{url}}" width="40%" height="40%"> <h3> {{file}} Version</h3>
+               <br><br>
+      {% endfor %}
+</html>

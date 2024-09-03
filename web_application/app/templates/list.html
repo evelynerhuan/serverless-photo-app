@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Image List</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--<link rel="stylesheet" href="/static/css/main.css" />-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+
+					<section class="major">
+						<div class="inner">
+    
+    
+    <!--<br/><br/>-->
+    <!--<p></p>-->
+    <div class="msg">{{ msg }}</div>
+    <p></p>
+    
+    <div class="table-wrapper">
+    <table class="alt"/>
+    <thead>
+       <th>Image Name</th>
+       <th>Date Added</th>
+       <th>Size</th>
+       <th>Format</th>
+       <!--<th>Date Added</th>-->
+       <th>User</th>
+       <th>Filter</th>
+       <th>Delete</th>
+    </thead>
+    {% for i in records %}
+        <tr>
+            <td>
+                <a href=" {{url_for('view_transform_image', filename=i['imagename'])}}" target="_blank" >
+                {{ i['imagename'] }}
+                </a>
+            </td>
+            <td>{{ i['date_added'] }}</td>
+            <td>{{ i['size'] }}</td>
+            <td>{{ i['format'] }}</td>
+            <!--<td>{{ i['date_added'] }}</td>-->
+            <td>{{ i['user'] }}</td>
+            
+            <td>
+                <form action="{{url_for('show_filter', filename=i['imagename'])}} " target="_blank" >
+                    <input type='submit' value='Filter' />
+                </form>
+            </td>
+            
+            
+            <td>
+                <form action="{{url_for('delete_image', filename=i['user_image_name'])}}" onsubmit='return confirm("Are you sure delete this image?")'>
+                    <input type='submit' value='Delete' />
+                </form>
+            </td>
+            
+        </tr>
+        
+    {% endfor %}
+    </table>
+    </div>
+    <p><p/>
+    {% if records %}
+    <td>
+            <form action="{{url_for('delete_image_all', username=records[0]['user'])}}" onsubmit='return confirm("Are you sure delete all images?")'>
+                <input type='submit' value='Delete All Images' />
+            </form>
+    </td>
+    {% endif %}
+
+        
+    </tr>
+
+
+
+<br/><br/>
+  <div style="text-align:left;">
+
+    </form>
+    <a href="{{url_for('dashboard')}}" class="button">Back to Dashboard</a><br>
+    </form>
+    <p></p>
+    <form>
+     <a href="{{url_for('logout') }}" class="button">Log Out</a>
+    </form>
+  
+  </div>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>

@@ -1,0 +1,65 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Register</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="form">-->
+<!--				<form action="{{ url_for('register') }}" method="post">-->
+<!--					<div class="msg">{{ msg }}</div>-->
+<!--					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/><br>-->
+<!--					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/><br>-->
+<!--					<input id="email" name="email" type="text" placeholder="Enter Your Email"/><br>-->
+					
+					
+<!--					<input type="submit" class="btn" value="Sign Up"></br>-->
+<!--				</form>-->
+<!--	</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Register</title>
+<!--<link href="../templates/static/css/log.css" rel="stylesheet" type="text/css">-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/log.css') }}" type="text/css">
+</head>
+
+<body>
+	<div id="logIn">
+		<div class="main">
+			<div class="title">
+				<div>
+{#					Picture Upload and Transformation#}
+				</div>
+				<!--<div style="background-image: url(../templates/static/img/log_cl.png);">-->
+				<div  style="background-image: url({{ url_for('static', filename='log_cl.png') }})" >
+				</div>
+				<div>
+					Register
+				</div>
+			</div>
+			<div class="form">
+				<form action="{{ url_for('register') }}" method="post">
+					<div class="msg">{{ msg }}</div>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/>
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/>
+					<input id="email" name="email" type="text" placeholder="Enter Your Email" class="textbox"/>
+					<input type="submit" class="btn" value="Sign Up"></br>
+				</form>
+			</div>
+		</div>
+		<div class="bottom">
+		<p >Already have an account? 
+			<a  href="{{url_for('login')}}"> Sign in here
+			</a>
+		</p>
+		</div>
+	</div>
+</body>
+</html>
